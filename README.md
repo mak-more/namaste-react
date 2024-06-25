@@ -1,7 +1,7 @@
 # Namaste React #
 
 # Git config #
-git init
+git init <br/>
 git add .
 git branch -M main
 git commit -m "episode-01"
