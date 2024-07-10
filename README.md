@@ -10,3 +10,21 @@ git push origin main <br/>
 # NPM config #
 npm init (package.jason will install) <br/>
 npm install -D parcel (D stands for development) <br/>
+
+# Parcel
+- Dev Build
+- Local Server
+- HMR = Hot Module Replacement
+- File Watching Algorithm - written in C++
+- Caching - Faster Builds
+- Image Optimization
+- Minification
+- Bundling
+- Compressing
+- Consistent Hashing
+- Code Splitting
+- Diffrential Bundling - support older browsers
+- HTTPs
+- Tree Shaking - remove unused code
+- Different Dev & Prod bundles
+- 
