@@ -18,6 +18,7 @@ const blogObj = [
     "blogRatings": "4.2"
   },
   {
+    "id": "3",
     "title": "8 Vital Do’s and Dont’s of Investing Responsibly in the Stock Market",
     "timeToRead": "2",
     "blogShortDesc": "Investing in the stock market is an exciting endeavor that can help you grow your wealth over time.",
@@ -26,6 +27,7 @@ const blogObj = [
     "blogRatings": "3.3"
   },
   {
+    "id": "4",
     "title": "Socially Responsible Investing: The Rise of ESG in the Stock Market",
     "timeToRead": "3",
     "blogShortDesc": "In recent years, socially responsible investing (SRI) has gained remarkable momentum in the world of finance, particularly in the stock market.",
@@ -34,6 +36,7 @@ const blogObj = [
     "blogRatings": "3.8"
   },
   {
+    "id": "5",
     "title": "How to Choose the Right Mutual Fund for Your Financial Goals",
     "timeToRead": "2",
     "blogShortDesc": "Investing in mutual funds is a popular and accessible way to grow your wealth and achieve your financial goals.",
@@ -42,6 +45,7 @@ const blogObj = [
     "blogRatings": "4.0"
   },
   {
+    "id": "6",
     "title": "How to hedge your portfolio with the help of Index Futures & Options?",
     "timeToRead": "4",
     "blogShortDesc": "In the unpredictable world of investing, protecting your portfolio from market volatility is essential.",
@@ -50,6 +54,7 @@ const blogObj = [
     "blogRatings": "3.2"
   },
   {
+    "id": "7",
     "title": "REIT Investment Guide: Simplify Real Estate Investing for Investors",
     "timeToRead": "3",
     "blogShortDesc": "Real Estate Investment Trusts, or REITs, are a popular and accessible way for investors to get involved in the...",
