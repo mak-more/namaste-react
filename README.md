@@ -41,5 +41,5 @@ npm install -D parcel (D stands for development) <br/>
 # React Hooks
 - Normal JS Utility Functions
 - Two types of Hooks:
-  - useState() - Superpowerful State Variables in react
+  - useState() - Superpowerful State Variables in react. Whenever State variable updates, React triggers the reconciliation cycle (Re-render the component)
   - useEffect()

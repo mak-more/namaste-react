@@ -87,20 +87,21 @@ img {
   margin: 0 20px;
   padding: 10px;
 }
-.blog-container {
+.blog-container, .shimmer-container {
   display: flex;
   /* justify-content: space-between; */
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
   margin: 20px 0;
 }
-.blog-card {
+.blog-card, .shimmer-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   border: 1px solid #ddd;
   margin: 1%;
   padding: 10px;
-  height: 100%;
+  height: auto;
   width: 18%;
   text-align: center;
   cursor: pointer;
@@ -133,6 +134,12 @@ img {
 }
 .blog-card .blog-ratings {
   font-size: 0.875rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
