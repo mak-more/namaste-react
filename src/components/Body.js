@@ -2,6 +2,8 @@ import BlogCard from "./BlogCard";
 import blogObj from "../../utils/mockData";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const topMargin = { //javascript use for styling 
   marginTop: '20px',
@@ -47,6 +49,8 @@ const Body = () => {
   const [blogList, setBlogList] = useState([]); // Local State React Variable - Super powerful Variable
   const [filterSearch, setFilterSearch] = useState ([]); // Local State React Variable - Super powerful Variable
   const [searchText, setSearchText] = useState(""); // Local State React Variable - Super powerful Variable
+
+  // const {blogsID, blogsCategory} = useParams();
 
   console.log("Body Render");
   
@@ -99,7 +103,9 @@ const Body = () => {
       <div className="blog-container">
       {
         filterSearch.map((blogS)=>(
-          <BlogCard key={blogS.id} blogData={blogS} />
+          //<Link to={"/blogs/" + blogsCategory + "/" + blogsID}>
+            <BlogCard key={blogS.id} blogData={blogS} />
+          //</Link>
         ))
       }
       </div>      
