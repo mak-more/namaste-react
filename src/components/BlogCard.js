@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const styleBlogCard = { //javascript use for styling 
   backgroundColor: '#eee',
   border: '1px solid #666',
@@ -5,8 +7,9 @@ const styleBlogCard = { //javascript use for styling
 
 const BlogCard = (props) => {
   const {blogData} = props;
+  // console.log(blogData);
   return (
-    <div className="blog-card" style={styleBlogCard}>
+    <Link to={"blogs" + blogData.url} className="blog-card" style={styleBlogCard}>
       <div className="blog-img">
         <img src={"https://uat-cmsapi.tradebulls.in" + blogData.imgUrl} alt="Blog Img" width="184" height="150" />
       </div>    
@@ -16,7 +19,7 @@ const BlogCard = (props) => {
         <div className="col-2">{blogData.date}</div>
         <div className="col-2">{blogData.timeToRead} min Read</div>
       </div>
-    </div>
+    </Link>
   )
 }
 

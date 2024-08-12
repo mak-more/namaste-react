@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 const BlogDetails = () => {
 
   const [blogDetailsExpand, setBlogDetailsExpand] = useState(null);
-  // const {blogsID, blogsCategory} = useParams();
-  const {params} = useParams();
-  console.log(params);
+  const {blogsID, blogsCategory} = useParams();
+  // const {params} = useParams();
+  console.log(blogsID);
 
   useEffect(() => {
     console.log("Blog DetailsExpand useEffect called");
@@ -15,10 +15,10 @@ const BlogDetails = () => {
   },[]);
 
   const fetchData = async () => {
-    // const data = await fetch ("https://uat-cmsapi.tradebulls.in/api/getBlogDetails/" + blogsCategory + "/" + blogsID);
-    const data = await fetch ("https://uat-cmsapi.tradebulls.in/api/getBlogDetails/bonds-sgb/sovereign-gold-bond-scheme");
+    const data = await fetch ("https://uat-cmsapi.tradebulls.in/api/getBlogDetails/" + blogsCategory + "/" + blogsID);
+    // const data = await fetch ("https://uat-cmsapi.tradebulls.in/api/getBlogDetails/bonds-sgb/sovereign-gold-bond-scheme");
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setBlogDetailsExpand(json);
   };
 
