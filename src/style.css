@@ -161,6 +161,27 @@ img {
   }
 }
 
+.user-card dl dt, .user-card dl dd {
+  display: inline-block;
+  vertical-align: top;
+}
+.user-card dl dt {
+  width: 100px;
+  position: relative;
+}
+.user-card dl dt::after {
+  position: absolute;
+  content: ":";
+  right: 10px;
+  top: 0;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 15px;
+}
+.user-card dl dd {
+  margin-inline-start: 20px;
+}
+
 .footer {
   display:  block;
   margin: 0 20px;

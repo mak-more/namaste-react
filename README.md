@@ -8,7 +8,7 @@ git commit -m "episode-01" <br/>
 git push origin main <br/>
 
 # NPM config #
-npm init (package.jason will install) <br/>
+npm init (package.json will install) <br/>
 npm install -D parcel (D stands for development) <br/>
 
 # Parcel
