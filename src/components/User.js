@@ -34,7 +34,11 @@ const User = ({ddName1, ddName2}) => { // Alternate for "props"
       <dl>
         <dt>Login</dt>
         <dd>{userInfo.login}</dd>
-      </dl> 
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd>{userInfo.url}</dd>
+      </dl>
     </div>
   )
 }

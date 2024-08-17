@@ -38,7 +38,7 @@ componentWillUnmount(){
   render () {
     const {ddName1, ddName2} = this.props;
     const {count} = this.state;
-    const {name, login} = this.state.userInfo;
+    const {name, login, url} = this.state.userInfo;
     // debugger;
     console.log(this.props.ddName1 + "Child Render");
     
@@ -62,7 +62,11 @@ componentWillUnmount(){
         <dl>
           <dt>Login</dt>
           <dd>{login}</dd>
-        </dl> 
+        </dl>
+        <dl>
+          <dt>URL</dt>
+          <dd>{url}</dd>
+        </dl>
       </div>
     )
   }
