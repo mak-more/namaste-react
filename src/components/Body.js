@@ -1,5 +1,6 @@
 import BlogCard from "./BlogCard";
 import blogObj from "../../utils/mockData";
+import { blogObjectProd } from "../../utils/constant";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -60,8 +61,9 @@ const Body = () => {
   },[])
 
   const fetchData = async () => {
-    const data = await fetch("https://uat-cmsapi.tradebulls.in/api/getAllBlogList");
+    const data = await fetch(blogObjectProd); //API Call
     const json = await data.json();
+    // console.log(blogObjectProd);
     
     //optional chaining
     setBlogList(json);

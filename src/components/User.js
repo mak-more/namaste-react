@@ -22,7 +22,7 @@ const User = ({ddName1, ddName2}) => { // Alternate for "props"
     <dl>
         <dt>
           <button onClick={()=>{
-            setCount(1);
+            setCount(count + 1);
           }}>Counter</button>
         </dt>
         <dd>{count}</dd>
