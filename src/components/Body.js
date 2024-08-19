@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const topMargin = { //javascript use for styling 
   marginTop: '20px',
@@ -74,6 +75,13 @@ const Body = () => {
   // if (blogList.length === 0) {
   //   return <div className="container"><Shimmer /></div>
   // }
+
+  const onlineStatus = useOnlineStatus()
+  if (onlineStatus === false) {
+    return (
+      <div className="container"><h4>Please check your intenet connection</h4></div>
+    )
+  }
 
   return blogList.length === 0 ? (
     <div className="container"><Shimmer /></div>

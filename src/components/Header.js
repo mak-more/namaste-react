@@ -1,6 +1,7 @@
 import {logoUrl} from "../../utils/constant";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -16,11 +17,14 @@ const Header = () => {
     console.log("Header [btnName] useEffect called on every render");
   },[btnName])
 
+  const onlineStatus = useOnlineStatus();
+
   return (
     <div className="header">
       <div className="logo"><img src={logoUrl} alt="Logo" className="" width="340" height="70" /></div>
       <div className="nav-items">
         <ul>
+          <li>{onlineStatus ? "Online" : "Offline"}</li>
           <li><Link to="/" title="Home">Home</Link></li>
           <li><Link to="/about" title="About Us">About Us</Link></li>
           <li><Link to="/contact" title="Contact Us">Contact Us</Link></li>

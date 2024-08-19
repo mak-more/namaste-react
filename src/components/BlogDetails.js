@@ -1,25 +1,15 @@
 import Shimmer from "./Shimmer";
-import { blogObjDetailsProd } from "../../utils/constant";
-import { useEffect, useState } from "react";
+import  useBlogDetails  from "../../utils/useBlogDetails";
 import { useParams } from "react-router-dom";
 
 const BlogDetails = () => {
 
-  const [blogDetailsExpand, setBlogDetailsExpand] = useState(null);
   const {blogsID, blogsCategory} = useParams();
-  // const {params} = useParams();
-  console.log(blogsID);  
+  console.log(useParams);
+  console.log(blogsCategory);
+  console.log(blogsID);
 
-  useEffect(() => {
-    console.log("Blog DetailsExpand useEffect called");
-    fetchData();
-  },[]);
-
-  const fetchData = async () => {
-    const data = await fetch (blogObjDetailsProd + blogsCategory + "/" + blogsID);
-    const json = await data.json();
-    setBlogDetailsExpand(json);
-  };
+  const blogDetailsExpand = useBlogDetails(blogsID, blogsCategory);
 
   if (blogDetailsExpand === null) return <Shimmer />;
 
