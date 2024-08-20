@@ -44,6 +44,14 @@ npm install -D parcel (D stands for development) <br/>
   - useState() - Superpowerful State Variables in react. Whenever State variable updates, React triggers the reconciliation cycle (Re-render the component)
   - useEffect()
 
-  # Two types of Routing in WEB Apps
-  - Client Side Routing
-  - Server Side Routing
+# Two types of Routing in WEB Apps
+- Client Side Routing
+- Server Side Routing
+
+# Optimizing Apps - Smaller Bundlers of a large file, load when user clicks
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Lazy Loading
+- On Demand Loading
+- Dynamic Import

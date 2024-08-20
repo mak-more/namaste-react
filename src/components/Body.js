@@ -77,15 +77,14 @@ const Body = () => {
   // }
 
   const onlineStatus = useOnlineStatus()
-  if (onlineStatus === false) {
-    return (
-      <div className="container"><h4>Please check your intenet connection</h4></div>
-    )
-  }
 
-  return blogList.length === 0 ? (
-    <div className="container"><Shimmer /></div>
-    ) : (
+  return (
+    onlineStatus === false ?
+    <div className="container"><h4>Please check your intenet connection</h4></div>
+    :
+    blogList?.length === 0 ?
+      <div className="container"><Shimmer /></div>
+    :
     <div className="container">      
       <div className="filter" style={topMargin}>        
         <div>
@@ -119,7 +118,8 @@ const Body = () => {
         ))
       }
       </div>      
-    </div>    
+    </div> 
+    
   )
 }
 
