@@ -14,8 +14,8 @@ const BlogDetails = () => {
   if (blogDetailsExpand === null) return <Shimmer />;
 
   return (
-    <div className="container">
-      <h2>{blogDetailsExpand.title}</h2>
+    <div className="container mx-auto m-4">
+      <h2 className="font-bold text-xl">{blogDetailsExpand.title}</h2>
       <p style={{"textAlign":"left"}}>{blogDetailsExpand.date}</p>
       <p><img src={"https://cmsapi.tradebulls.in" + blogDetailsExpand.blogImg.url} alt="" /></p>
       <p>{blogDetailsExpand.blogDescripiton}</p>

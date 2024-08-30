@@ -20,16 +20,16 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo"><img src={logoUrl} alt="Logo" className="" width="340" height="70" /></div>
+    <div className="flex justify-between shadow-md px-4 py-4">
+      <div className="w-60"><img src={logoUrl} alt="Logo" className="" width="340" height="70" /></div>
       <div className="nav-items">
-        <ul>
-          <li>{onlineStatus ? "Online" : "Offline"}</li>
-          <li><Link to="/" title="Home">Home</Link></li>
-          <li><Link to="/about" title="About Us">About Us</Link></li>
-          <li><Link to="/contact" title="Contact Us">Contact Us</Link></li>
-          <li><Link to="/grocery" title="Grocery">Grocery</Link></li>
-          <li><button title="" onClick={() => {
+        <ul className="flex">
+          <li className="p-2">{onlineStatus ? "Online" : "Offline"}</li>
+          <li className="p-2"><Link to="/" title="Home">Home</Link></li>
+          <li className="p-2"><Link to="/about" title="About Us">About Us</Link></li>
+          <li className="p-2"><Link to="/contact" title="Contact Us">Contact Us</Link></li>
+          <li className="p-2"><Link to="/grocery" title="Grocery">Grocery</Link></li>
+          <li className="p-2"><button title="" onClick={() => {
             btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             console.log(btnName);
             }}>{btnName}</button></li>

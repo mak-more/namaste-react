@@ -28,16 +28,16 @@ import React from "react";
 const About = () => {
   console.log("About Us load");
  return (
-  <div className="container">
-    <h2>About Functional Component</h2>
-    <div className="d-flex">
-      <div className="col-2">
-        <h4>Functional Component - New Method</h4>
+  <div className="container mx-auto m-4">
+    <h2 className="font-bold text-xl">About Functional Component</h2>
+    <div className="grid gap-2 grid-cols-2">
+      <div className="">
+        <h4 className="font-bold">Functional Component - New Method</h4>
         {/* <User ddName1={"Black hot drink (Function)"} ddName2={"White cold drink (Function)"} /> */}
         <User />
       </div>
-      <div className="col-2">
-        <h4>Class Component - Old Method</h4>
+      <div className="">
+        <h4 className="font-bold">Class Component - Old Method</h4>
         <UserClass ddName1={"UserClass.js file - "} />
       </div>
     </div>

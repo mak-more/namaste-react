@@ -80,15 +80,15 @@ const Body = () => {
 
   return (
     onlineStatus === false ?
-    <div className="container"><h4>Please check your intenet connection</h4></div>
+    <div className="container mx-auto m-4"><h4>Please check your intenet connection</h4></div>
     :
     blogList?.length === 0 ?
-      <div className="container"><Shimmer /></div>
+      <div className="flex justify-between px-4"><Shimmer /></div>
     :
-    <div className="container">      
-      <div className="filter" style={topMargin}>        
+    <div className="container mx-auto m-4">
+      <div className="flex justify-between my-4 align-middle" style={topMargin}>
         <div>
-          <button className="btn-filter" onClick={() => {
+          <button className="px-3 py-1 bg-slate-300 rounded-lg" onClick={() => {
             const filterList = blogList.filter(
               (res) => res.timeToRead > 3
             );
@@ -96,11 +96,11 @@ const Body = () => {
           }}
           >Top Rankings</button>
         </div>
-        <div className="search-bar">
-          <input type="text" className="" value={searchText} onChange={(e) => {
+        <div className="search">
+          <input type="text" className="border mx-2" value={searchText} onChange={(e) => {
             setSearchText(e.target.value);
           }} placeholder="Search..." />
-          <button onClick={() => {
+          <button className="px-3 py-1 text-white bg-blue-600 rounded-lg" onClick={() => {
             console.log(searchText);
             const filterSearch = blogList.filter(
               (res) => res.title.toLowerCase().includes(searchText.toLowerCase())
@@ -109,7 +109,7 @@ const Body = () => {
           }}>Search</button>
         </div>
       </div>
-      <div className="blog-container">
+      <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {
         filterSearch.map((blogS)=>(
           //<Link to={"/blogs/" + blogsCategory + "/" + blogsID}>

@@ -1,0 +1,193 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Custom CSS not used due to "tailwindcss" FROM HERE */
+/* html {
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.d-flex {
+  display: flex;
+}
+.col-1 {
+  width: 100%;
+}
+.col-2 {
+  width: 50%;
+}
+.col-3 {
+  width: 33.33%;
+}
+.col-4 {
+  width: 25%;
+}
+.col-5 {
+  width: 20%;
+}
+.col-6 {
+  width: 10%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  padding: 10px;
+  border-bottom: 2px solid #999;
+}
+.header .logo {
+  position: relative;
+  height: 50px;
+}
+.header .logo img {
+  position: relative;
+  height: 100%;
+  left: -46px;
+}
+.nav-items ul {
+  list-style-type: none;  
+}
+.nav-items ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  position: relative;
+}
+.nav-items ul li::before {
+  position: absolute;
+  content: "|";
+  left: -10px;
+  top: 0;
+  height: 100%;
+}
+.nav-items ul li:first-child::before {
+  display: none;
+}
+
+.container {
+  display:  block;
+  margin: 0 20px;
+  padding: 10px;
+}
+.blog-container, .shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.blog-card, .shimmer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid #ddd;
+  color: #333;
+  margin: 1%;
+  padding: 10px;
+  height: auto;
+  width: 18%;
+  text-align: center;
+  cursor: pointer;
+}
+.blog-card:hover {
+  background-color: #ddd !important;
+  text-decoration: none;
+}
+.blog-card h4 {
+  margin: 10px 0;
+}
+.blog-card h5 {
+  margin: 0 0 20px;
+}
+.blog-card .blog-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 135px;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fefefe;
+  border: 1px solid #666;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 5px;
+}
+.blog-card .blog-img img {
+  height: calc(100% - 10px);
+}
+.blog-card .blog-ratings {
+  font-size: 0.875rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+/* Custom CSS not used due to "tailwindcss" TO HERE */
+
+/*Animation to Shimmer Component Card and Menu card*/
+.animate {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+.user-card dl dt, .user-card dl dd {
+  display: inline-block;
+  vertical-align: top;
+}
+.user-card dl dt {
+  width: 100px;
+  position: relative;
+}
+.user-card dl dt::after {
+  position: absolute;
+  content: ":";
+  right: 10px;
+  top: 0;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 15px;
+}
+.user-card dl dd {
+  margin-inline-start: 20px;
+}
+
+.footer {
+  display:  block;
+  margin: 0 20px;
+  padding: 10px;
+  border-top: 2px solid #999;
+  background-color: #eee;
+}
