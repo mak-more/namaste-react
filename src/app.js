@@ -1,4 +1,4 @@
-import React, { lazy , Suspense } from "react";
+import React, { lazy , Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Error from "./components/Error";
 import Loader from "./components/Loader";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "../utils/userContext";
 
 
 /* Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On Demand Loading, Dynamic Import
@@ -19,12 +20,29 @@ const Grocery = lazy(()=> import("./components/Grocery")); //Lazy Loading
 /* - ENDS HERE */
 
 const AppLayout = () => {
+
+  //Authentication login user
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    const data = {
+      name: "Makarand More",
+    };
+    setUserName(data.name);
+  },[]);
+
   return  (
-    <div className="app-layout">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    // below username is apply to whole website
+    <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+      <div className="app-layout">
+      {/* below username is only apply to Header section */}
+      <UserContext.Provider value={{loggedInUser: "User-Header"}}>
+        <Header />
+      </UserContext.Provider>
+        <div className="relative top-20"><Outlet /></div>
+        <Footer />
+      </div>
+    </UserContext.Provider>
   )
 }
 

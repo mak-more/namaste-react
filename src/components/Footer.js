@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="footer"></div>
+    <div className="footer relative top-20"></div>
   )
 }
 

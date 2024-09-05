@@ -43,6 +43,7 @@ npm install -D parcel (D stands for development) <br/>
 - Two types of Hooks:
   - useState() - Superpowerful State Variables in react. Whenever State variable updates, React triggers the reconciliation cycle (Re-render the component)
   - useEffect()
+  - useContext()
 
 # Two types of Routing in WEB Apps
 - Client Side Routing
@@ -55,3 +56,9 @@ npm install -D parcel (D stands for development) <br/>
 - Lazy Loading
 - On Demand Loading
 - Dynamic Import
+
+# Higher Order Component
+
+# Props drilling
+
+# Create Context
