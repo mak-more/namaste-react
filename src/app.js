@@ -11,6 +11,9 @@ import Error from "./components/Error";
 import Loader from "./components/Loader";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "../utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
+import Cart from "./components/Cart";
 
 
 /* Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On Demand Loading, Dynamic Import
@@ -32,17 +35,19 @@ const AppLayout = () => {
   },[]);
 
   return  (
-    // below username is apply to whole website
-    <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
-      <div className="app-layout">
-      {/* below username is only apply to Header section */}
-      <UserContext.Provider value={{loggedInUser: "User-Header"}}>
-        <Header />
+    <Provider store={appStore}>
+      {/* below username is apply to whole website */}
+      <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+        <div className="app-layout">
+        {/* below username is only apply to Header section */}
+        <UserContext.Provider value={{loggedInUser: "User-Header"}}>
+          <Header />
+        </UserContext.Provider>
+          <div className="relative top-20"><Outlet /></div>
+          <Footer />
+        </div>
       </UserContext.Provider>
-        <div className="relative top-20"><Outlet /></div>
-        <Footer />
-      </div>
-    </UserContext.Provider>
+    </Provider>
   )
 }
 
@@ -70,6 +75,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/grocery",
         element:<Suspense fallback={<Loader />}><Grocery /></Suspense>
+      },
+      {
+        path:"/cart",
+        element:<Cart />
       }
     ],
     errorElement: <Error />

@@ -62,3 +62,11 @@ npm install -D parcel (D stands for development) <br/>
 # Props drilling
 
 # Create Context
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- Create cardslice (to add item)
+- Dispatch (action)
+- Selector
