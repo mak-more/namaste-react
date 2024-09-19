@@ -70,3 +70,21 @@ npm install -D parcel (D stands for development) <br/>
 - Create cardslice (to add item)
 - Dispatch (action)
 - Selector
+
+# Types of Testing - Testing to be do by Developer
+- Unit Testing
+- Integration Testing
+- End to End Testing - Testing react app from start to end
+
+# Setting up Testing in our App
+- Install React Testing Library
+- Install React Jest
+- Insatll Babel dependencies (Jest using Babel)
+- Config. Babel
+- Config. Parcel to disable Babel transpilation, which override the default Parcel config for JS to exclude @parcel/transformer-babel
+- Jest Config. - "npx jest --init"
+- Install Jsdom library
+- Dunder Method
+- Install "@babel/preset-react" to make JSX wrok in test cases
+- Include "@babel/preset-react" inside Babel config
+- npm i -D "@testing-library/jest-dom"
