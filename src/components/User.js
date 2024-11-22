@@ -8,7 +8,21 @@ const User = ({ddName1, ddName2}) => { // Alternate for "props"
   useEffect (() => {
     // API called
     fetchData();
-  }, [count]);
+  // }, [count]);
+  }, []);
+
+  useEffect (() => {
+    const timer = setInterval(() => {
+      console.log("Set Interval");
+    }, 1000);
+    console.log("User useEffect");
+    return () => {
+      clearInterval(timer);
+      console.log("User useEffect Return");
+    };
+  }, []);
+  
+  console.log("User Render");
 
   const fetchData = async () => {
     const data = await fetch ("https://api.github.com/users/mak-more");

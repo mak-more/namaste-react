@@ -5,11 +5,11 @@ import { useParams } from "react-router-dom";
 const BlogDetails = () => {
 
   const {blogsID, blogsCategory} = useParams();
-  console.log(useParams);
-  console.log(blogsCategory);
-  console.log(blogsID);
+  console.log(useParams, '- useParams');
+  console.log(blogsCategory, '- blogsCategory');
+  console.log(blogsID, '- blogsID');
 
-  const blogDetailsExpand = useBlogDetails(blogsID, blogsCategory);
+  const blogDetailsExpand = useBlogDetails(blogsID, blogsCategory); // Custom Hooks
 
   if (blogDetailsExpand === null) return <Shimmer />;
 

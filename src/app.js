@@ -1,6 +1,6 @@
 import React, { lazy , Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
+import Header from "./components/header";
 import Body from "./components/Body";
 import BlogDetails from "./components/BlogDetails";
 // import About from "./components/About";
@@ -38,7 +38,7 @@ const AppLayout = () => {
     <Provider store={appStore}>
       {/* below username is apply to whole website */}
       <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
-        <div className="app-layout">
+        <div>
         {/* below username is only apply to Header section */}
         <UserContext.Provider value={{loggedInUser: "User-Header"}}>
           <Header />

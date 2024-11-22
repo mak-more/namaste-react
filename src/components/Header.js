@@ -9,17 +9,22 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   console.log("Header Render");
 
+  // If NO dependancy array => useEffect is called on every render
+  useEffect(()=> {
+    console.log("Header useEffect called on every render when no depedency use");
+  })
+
   // If dependancy array is empty => useEffect is called on initial render (just once)
   useEffect(()=>{
     console.log("Header useEffect called just once");
   },[])
 
-  // If dependancy array is [btnName] => useEffect is called on every render of [btnName]
+  // If dependancy array is [btnName] => useEffect is called on every render of [btnName] is updated
   useEffect(()=>{
     console.log("Header [btnName] useEffect called on every render");
   },[btnName])
 
-  const onlineStatus = useOnlineStatus();
+  const onlineStatus = useOnlineStatus(); // Custom Hooks
   const {loggedInUser} = useContext(UserContext);
   console.log(loggedInUser);
 

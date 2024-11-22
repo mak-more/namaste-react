@@ -22,12 +22,15 @@ npm install -D parcel (D stands for development) <br/>
 - Bundling
 - Compressing
 - Consistent Hashing
-- Code Splitting
-- Diffrential Bundling - support older browsers
+- Differential Bundling - support older browsers
 - HTTPs
 - Tree Shaking - remove unused code
 - Different Dev & Prod bundles
-- 
+- npm parcel build index.html
+
+# Two types of React Components
+- Class Component - OLD
+- Functional Components - NEW
 
 # Two types of Export/Import
  - Default Export/Import
@@ -44,6 +47,16 @@ npm install -D parcel (D stands for development) <br/>
   - useState() - Superpowerful State Variables in react. Whenever State variable updates, React triggers the reconciliation cycle (Re-render the component)
   - useEffect()
   - useContext()
+  - useRouteError()
+  - useParams()
+  - custom hooks
+
+# React Fiber Architecture
+
+# React Life Cycle Diagram
+
+# Install React Router
+-  npm react-router-dom
 
 # Two types of Routing in WEB Apps
 - Client Side Routing
@@ -57,7 +70,19 @@ npm install -D parcel (D stands for development) <br/>
 - On Demand Loading
 - Dynamic Import
 
+# Config. Driven UI
+
+# Cloudinary Image ID (CDN link of images)
+
+# Map, Filter, Reduce - Javascript
+
 # Higher Order Component
+
+# Monolith, Micro-Services
+
+# CORS
+- Chrome extension
+- corsproxy.io
 
 # Props drilling
 
