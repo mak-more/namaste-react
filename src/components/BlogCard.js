@@ -24,7 +24,7 @@ const BlogCard = (props) => {
   return (    
     // <Link to={"blogs" + blogData.url} className="relative flex flex-wrap items-center justify-around p-2 bg-gray-200 hover:bg-gray-300 z-0" style={styleBlogCard}>
     <>
-    <div className="relative flex flex-wrap items-center justify-around p-2 bg-gray-200 hover:bg-gray-300 z-0" style={styleBlogCard}>
+    <div className="relative flex flex-wrap items-center justify-around p-2 h-full bg-gray-200 hover:bg-gray-300 z-0" style={styleBlogCard}>
       <div>
         <img src={"https://cmsapi.tradebulls.in" + blogData.imgUrl} alt="Blog Img" className="h-32" width="" height="" />
       </div>    
@@ -44,14 +44,16 @@ const BlogCard = (props) => {
   )  
 };
 
-//Higher Order Component means: input - BlogCard => BlogColorCode
+//Higher Order Component use to enhance the "<BlogCard/> component": BlogCard => BlogColorCode
 export const withColorCode = (BlogCard) => {
   return (props) => {
-    const {blogData}=props
+    const {blogData} = props;
+    const bgColor = (blogData.catColorCode)?.toLowerCase();
+    const classColor = bgColor.replace(' ', '-');
     return (
       <div className="relative">
-        <h4 className="absolute bg-red-600 text-white p-1 text-sm rounded-br-lg z-30">{blogData?.catColorCode}</h4>
-        <BlogCard {...props}/>
+        <h4 className={`absolute py-1 px-2 text-sm text-white font-bold rounded-br-lg z-30 ${classColor}`}>{blogData?.catColorCode}</h4>
+         <BlogCard {...props}/> {/* {...props} means Spread Data - all props data will appear here */}
       </div>
     );
   };

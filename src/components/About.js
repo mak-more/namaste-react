@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import UserContext from "../../utils/userContext";
 import User from "./User";
 import UserClass from "./UserClass";
 import React from "react";
@@ -27,9 +29,11 @@ import React from "react";
 
 const About = () => {
   console.log("About Us load");
+  const {loggedInUser} = useContext(UserContext);
  return (
   <div className="container mx-auto m-4">
     <h2 className="font-bold text-xl">About Functional Component</h2>
+    <h4 className="text-lg"><span className="font-bold">User:</span> {loggedInUser}</h4>
     <div className="grid gap-2 grid-cols-2">
       <div className="">
         <h4 className="font-bold">Functional Component - New Method</h4>

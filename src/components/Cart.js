@@ -20,7 +20,7 @@ const handleClearCart = () => {
       <ul>
       {
         cartItems.map((item,index)=>(              
-          <li className="">
+          <li className="" key={index}>
             <BlogCard blogData={item} />
           </li>              
         ))

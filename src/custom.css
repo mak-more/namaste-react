@@ -190,3 +190,15 @@ img {
   border-top: 2px solid #999;
   background-color: #eee;
 }
+
+/* Colours */
+.blue {background-color: #128ad9;}
+.light-blue {background-color: #14b5a2;}
+.dark-blue {background-color: #454ad1;}
+.green {background-color: #18af55;}
+.dark-green {background-color: #488b13;}
+.pink {background-color: #da55c5;}
+.red {background-color: #e15656;}
+.purple {background-color: #a35adc;}
+.yellow {background-color: #e1b209;}
+.orange {background-color: #e08b19;}

@@ -46,9 +46,9 @@ npm install -D parcel (D stands for development) <br/>
 - Two types of Hooks:
   - useState() - Superpowerful State Variables in react. Whenever State variable updates, React triggers the reconciliation cycle (Re-render the component)
   - useEffect()
+  - useParams()
   - useContext()
   - useRouteError()
-  - useParams()
   - custom hooks
 
 # React Fiber Architecture
@@ -76,25 +76,35 @@ npm install -D parcel (D stands for development) <br/>
 
 # Map, Filter, Reduce - Javascript
 
-# Higher Order Component
-
 # Monolith, Micro-Services
 
 # CORS
 - Chrome extension
 - corsproxy.io
 
-# Props drilling
+# Tailwind CSS, Tailwind UI
 
-# Create Context
+# Props drilling
+- useContext()
+- createContext
+
+# Higher Order Component (Use to enhance the particular component)
+
+# Control & UnControl component
+
+# Lifting State Up in react (Accordian)
+
+# Redux vs Zustand
 
 # Redux Toolkit
 - Install @reduxjs/toolkit and react-redux
 - Build our store
 - Connect our store to our app
-- Create cardslice (to add item)
+- Create cardslice (to add item, update, modify)
 - Dispatch (action)
 - Selector
+- Redux Toolkit uses Immer
+- RTK Query
 
 # Types of Testing - Testing to be do by Developer
 - Unit Testing

@@ -19,8 +19,9 @@ const Body = () => {
   // const [blogList, setBlogList] = useState(blogObj); // Local State React Variable - Super powerful Variable
 
   const [blogList, setBlogList] = useState([]); // Local State React Variable - Super powerful Variable
-  const [filterSearch, setFilterSearch] = useState ([]); // Local State React Variable - Super powerful Variable
-  const [searchText, setSearchText] = useState(""); // Local State React Variable - Super powerful Variable
+  const [filterSearch, setFilterSearch] = useState ([]);
+  const [optionSelect, setOptionSelect] = useState ([]);
+  const [searchText, setSearchText] = useState("");
 
   const BlogColorCode = withColorCode(BlogCard);
 
@@ -76,7 +77,13 @@ const Body = () => {
             <label className="ml-8 font-bold">User : </label>
             <input className="border-2 border-slate-300 mx-2 p-1" placeholder="User Name" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)} />
         </div>
+
         <div className="search">
+          <select className="mr-5 p-1">
+            <option>Select Colour</option>
+            <option>Colour1</option>
+          </select>
+
           <input type="text" className="border-2 border-slate-300 mx-2 p-1" value={searchText} onChange={(e) => {setSearchText(e.target.value)}} placeholder="Search..." />
           <button className="px-3 py-1 text-white bg-blue-600 rounded-lg" onClick={() => {
             console.log(searchText);
@@ -86,11 +93,12 @@ const Body = () => {
               setFilterSearch(filterSearch);
           }}>Search</button>
         </div>
+
       </div>
       <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {
         filterSearch.map((blogS)=>(
-          blogS.catColorCode && blogS.catColorCode == "Red" ? (
+          blogS.catColorCode ? (
             <BlogColorCode blogData={blogS} />
             ) : (
               <BlogCard key={blogS.id} blogData={blogS} />
