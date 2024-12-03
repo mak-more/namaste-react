@@ -1,6 +1,6 @@
 import BlogCard, {withColorCode} from "./BlogCard";
 import blogObj from "../../utils/mockData";
-import { blogObjectProd } from "../../utils/constant";
+import { blogObjectProd, blogColorCode } from "../../utils/constant";
 import Shimmer from "./Shimmer";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
@@ -20,15 +20,22 @@ const Body = () => {
 
   const [blogList, setBlogList] = useState([]); // Local State React Variable - Super powerful Variable
   const [filterSearch, setFilterSearch] = useState ([]);
-  const [optionSelect, setOptionSelect] = useState ([]);
   const [searchText, setSearchText] = useState("");
 
   const BlogColorCode = withColorCode(BlogCard);
 
   const {loggedInUser, setUserName} = useContext(UserContext);
 
-  // const {blogsID, blogsCategory} = useParams();
-  
+
+  const handleColorChange = (e) => {
+    const cardColor = e.target.value
+    console.log(cardColor, 'e.target.value')
+    const colorResult = blogList.filter((res) => res.catColorCode === cardColor)
+    console.log(colorResult, 'colorResult')
+    setFilterSearch(cardColor=='Select Colour'? blogList : colorResult);
+  }
+
+  // const {blogsID, blogsCategory} = useParams();  
   
   // Whenever State Variables update, react triggers and re-render the component
   console.log("Body Render");
@@ -78,10 +85,11 @@ const Body = () => {
             <input className="border-2 border-slate-300 mx-2 p-1" placeholder="User Name" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)} />
         </div>
 
-        <div className="search">
-          <select className="mr-5 p-1">
-            <option>Select Colour</option>
-            <option>Colour1</option>
+        <div className="search">        
+          <select className="mr-5 p-1 border-2" onChange={handleColorChange}>
+          {blogColorCode?.map((colorCode, index)=>(
+            <option key={index} value={colorCode.name}>{colorCode.name}</option>
+          ))}
           </select>
 
           <input type="text" className="border-2 border-slate-300 mx-2 p-1" value={searchText} onChange={(e) => {setSearchText(e.target.value)}} placeholder="Search..." />
@@ -105,11 +113,6 @@ const Body = () => {
               )
         ))
       }
-      {/* {
-        sorted.map((blogS)=>(
-          <BlogColorCode blogData={blogS} />
-        ))
-      } */}
       </div>      
     </div> 
     
