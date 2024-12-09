@@ -50,6 +50,8 @@ npm install -D parcel (D stands for development) <br/>
   - useContext()
   - useRouteError()
   - custom hooks
+  - useRef
+  - useNavigate
 
 # React Fiber Architecture
 

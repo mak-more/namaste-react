@@ -42,6 +42,7 @@ const Header = () => {
             <ul className="flex">
               <li className="p-2">{onlineStatus ? "Online" : "Offline"}</li>
               <li className="p-2"><Link to="/" title="Home">Home</Link></li>
+              <li className="p-2"><Link to="/blogs" title="Blogs">Blogs</Link></li>
               <li className="p-2"><Link to="/about" title="About Us">About Us</Link></li>
               <li className="p-2"><Link to="/contact" title="Contact Us">Contact Us</Link></li>
               <li className="p-2"><Link to="/grocery" title="Grocery">Grocery</Link></li>

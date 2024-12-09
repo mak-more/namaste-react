@@ -29,7 +29,7 @@ const BlogCard = (props) => {
         <img src={"https://cmsapi.tradebulls.in" + blogData.imgUrl} alt="Blog Img" className="h-32" width="" height="" />
       </div>    
       <h4 className="font-bold text-center my-2">{truncate(blogData.title,50)+'...'}</h4>
-      <p className="text-justify mb-3">{truncate(blogData.blogShortDesc,100)+'...'}<br/><Link to={"blogs" + blogData.url} className="font-semibold text-center inline-block my-2 px-2 py-1 text-white bg-blue-600 rounded-md">Read More</Link></p>
+      <p className="text-justify mb-3">{truncate(blogData.blogShortDesc,100)+'...'}<br/><Link to={blogData.url} className="font-semibold text-center inline-block my-2 px-2 py-1 text-white bg-blue-600 rounded-md">Read More</Link></p>
       <div className="flex flex-row w-full justify-between items-center">
         <div className="font-semibold">{blogData.date}</div>
         <div className="font-semibold">{blogData.timeToRead} min to read</div>

@@ -1,8 +1,10 @@
 import React, { lazy , Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/header";
-import Body from "./components/Body";
+import Homepage from "./components/Homepage";
+import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
+import Cart from "./components/Cart";
 // import About from "./components/About";
 import Contact from "./components/Contact";
 // import Grocery from "./components/Grocery";
@@ -13,7 +15,6 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "../utils/userContext";
 import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
-import Cart from "./components/Cart";
 
 
 /* Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On Demand Loading, Dynamic Import
@@ -58,10 +59,14 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path:"/",
-        element:<Body />
+        element:<Homepage />
       },
       {
-        path:"/blogs/:blogsCategory/:blogsID",
+        path:"/blogs",
+        element:<Blogs />
+      },
+      {
+        path:"/:blogsCategory/:blogsID",
         element:<BlogDetails />
       },
       {
