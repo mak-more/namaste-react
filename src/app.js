@@ -5,6 +5,8 @@ import Homepage from "./components/Homepage";
 import Blogs from "./components/Blogs";
 import BlogDetails from "./components/BlogDetails";
 import Cart from "./components/Cart";
+import Videos from "./components/Videos";
+import VideoDetails from "./components/VideoDetails";
 // import About from "./components/About";
 import Contact from "./components/Contact";
 // import Grocery from "./components/Grocery";
@@ -68,6 +70,14 @@ const appRouter = createBrowserRouter([
       {
         path:"/:blogsCategory/:blogsID",
         element:<BlogDetails />
+      },
+      {
+        path:"/videos",
+        element:<Videos />
+      },
+      {
+        path:"/:videoCategory/:videoId",
+        element:<VideoDetails />
       },
       {
         path:"/about",

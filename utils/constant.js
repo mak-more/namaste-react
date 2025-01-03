@@ -13,7 +13,21 @@ export const blogColorCode = [
   {name: 'Orange'}
 ];
 
+export const tags = ['Trading','Mutual Fund','Recently Uploaded','Margin Trading','Pledge','Order','IPO','CDSL','Fund Transfer','Intraday','Tax Saving','Add Nominee','Activate MTF','TOUCH 2.0','PRO']
+
+export const languages = ['All','English','Hindi']
+
+export const videoLeftMenus = [
+  {identifier: '/videos', name: 'All Videos'},
+  {identifier: '/videos/trade-using-mobile-app', name: 'Trade Using Mobile App'},
+  {identifier: '/videos/tradebulls-investment-products', name: 'Tradebulls Investment Products'}
+];
+
 export const blogObjectUat = "https://uat-cmsapi.tradebulls.in/api/getAllBlogList"; //UAT API
 
-export const blogObjectProd = "https://cmsapi.tradebulls.in/api/getAllBlogList"; //PROD API
-export const blogObjDetailsProd = "https://cmsapi.tradebulls.in/api/getBlogDetails/"; //PROD API
+// PROD API Below
+export const TB_STRAPI_URL = 'https://cmsapi.tradebulls.in';
+export const blogObjectProd = "https://cmsapi.tradebulls.in/api/getAllBlogList";
+export const blogObjDetailsProd = "https://cmsapi.tradebulls.in/api/getBlogDetails/";
+export const videoCategoryProd = 'https://cmsapi.tradebulls.in/api/getAllVideoCategory/';
+export const videoDetailsProd = 'https://cmsapi.tradebulls.in/api/getVideoDetails/';
